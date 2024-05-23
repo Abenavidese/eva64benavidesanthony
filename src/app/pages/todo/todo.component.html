@@ -1,0 +1,24 @@
+
+<label id="txtTitle">Titulo de la actividad</label>
+<input type="text" id="txtTitle" name="txtTitle" 
+    [(ngModel)]="todoapps.title"/>
+<br/>
+
+<label for="txtMsg">Actividad</label>
+<textarea id="txtMsg" name="txtMsg" 
+[(ngModel)]="todoapps.activity"></textarea>
+<br/>
+
+<button (click)="limpiar()">Limpiar</button>
+
+<button (click)="guardar()">Guardar</button>
+
+
+<ul>
+    @for(activity of todoactivity; track activity){
+        <li><strong>{{todoapps.title}}</strong>: <span>{{todoapps.activity}}</span></li>
+    }
+</ul>
+
+
+
